@@ -12,4 +12,7 @@ class Enfermedad {
 	}
 	
 	method producirEfecto(persona) {}
+	
+	method celulasQueAmenaza() = celulasQueAmenaza
+	method diasInfectando() = diasInfectando
 }

@@ -4,32 +4,50 @@ import EnfermedadInfecciosa.*
 import Persona.*
 
 describe "Dr. Casa" {
-	
+
 	var malaria
 	var otitis
 	var lupus
 	var otraMalaria
-		
 	var logan
 	var frank
-	
+
 	fixture {
 		malaria = new EnfermedadInfecciosa(500)
 		otitis = new EnfermedadInfecciosa(100)
 		lupus = new EnfermedadAutoinmune(10000)
 		otraMalaria = new EnfermedadInfecciosa(800)
-		
-		logan = new Persona(36, 3_000_000, #{malaria, otitis, lupus})
-		frank = new Persona(36, 3_500_000, #{})
+		logan = new Persona(36, 3000000, #{ malaria, otitis, lupus })
+		frank = new Persona(36, 3500000, #{})
 	}
 
-	test "frank contrae la otraMalaria" {
+	test "Frank contrae la otraMalaria" {
 		frank.contraerEnfermedad(otraMalaria)
 		assert.notThat(frank.enfermedades().isEmpty())
 	}
-	
-	test "la malaria de logan se reproduce y afecta 1000 celulas" {
+
+	test "La malaria de logan se reproduce y afecta 1000 celulas" {
 		malaria.reproducirse()
 		assert.equals(1000, malaria.celulasQueAmenaza())
 	}
+
+	test "La enfermedad que mas celulas le afecta a logan es 'lupus'" {
+		assert.equals(lupus, logan.enfermedadMasDura())
+	}
+
+	test "Las celulas afectadas por enfermedades agresivas de logan son 0" {
+		assert.equals(0, logan.celulasAfectadasPorEnfermedadesAgresivas())
+	}
+
+	test "La enfermedad que mas celulas le afecta a logan despues de 31 días es 'lupus'" {
+		31.times({ _=> logan.pasarDia() })
+		assert.equals(lupus, logan.enfermedadMasDura())
+	}
+
+	test "Las celulas afectadas por enfermedades agresivas de logan despues de 31 días son 10000" {
+		31.times{ _=> logan.pasarDia() }
+		assert.equals(10000, logan.celulasAfectadasPorEnfermedadesAgresivas())
+	}
+
 }
+
