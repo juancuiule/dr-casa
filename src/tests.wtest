@@ -1,0 +1,35 @@
+import Enfermedad.*
+import EnfermedadAutoinmune.*
+import EnfermedadInfecciosa.*
+import Persona.*
+
+describe "Dr. Casa" {
+	
+	var malaria
+	var otitis
+	var lupus
+	var otraMalaria
+		
+	var logan
+	var frank
+	
+	fixture {
+		malaria = new EnfermedadInfecciosa(500)
+		otitis = new EnfermedadInfecciosa(100)
+		lupus = new EnfermedadAutoinmune(10000)
+		otraMalaria = new EnfermedadInfecciosa(800)
+		
+		logan = new Persona(36, 3_000_000, #{malaria, otitis, lupus})
+		frank = new Persona(36, 3_500_000, #{})
+	}
+
+	test "frank contrae la otraMalaria" {
+		frank.contraerEnfermedad(otraMalaria)
+		assert.notThat(frank.enfermedades().isEmpty())
+	}
+	
+	test "la malaria de logan se reproduce y afecta 1000 celulas" {
+		malaria.reproducirse()
+		assert.equals(1000, malaria.celulasQueAmenaza())
+	}
+}
