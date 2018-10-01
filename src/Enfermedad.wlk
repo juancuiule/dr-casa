@@ -16,8 +16,7 @@ class Enfermedad {
 		celulasQueAmenaza -= celulas
 	}
 
-	method producirEfecto(persona) {
-	}
+	method producirEfecto(persona)
 
 	method celulasQueAmenaza() = celulasQueAmenaza
 
