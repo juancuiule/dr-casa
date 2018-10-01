@@ -11,7 +11,7 @@ class Enfermedad {
 		self.producirEfecto(persona)		
 	}
 	
-	method producirEfecto(persona) {}
+	method producirEfecto(persona)
 	
 	method celulasQueAmenaza() = celulasQueAmenaza
 	method diasInfectando() = diasInfectando
