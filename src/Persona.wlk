@@ -34,7 +34,8 @@ class Persona {
 	}
 
 	method enfermedadMasDura() {
-		return enfermedades.max({ enfermedad => enfermedad.celulasQueAmenaza() })}
+		return enfermedades.max({ enfermedad => enfermedad.celulasQueAmenaza() })
+	}
 
 	method perderCelulas(cantidad) {
 		celulas -= cantidad
