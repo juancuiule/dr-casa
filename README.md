@@ -12,6 +12,6 @@ git checkout <nombre del branch>
 
 | Descripción                                                             |   branch                        |
 |:-----------------------------------------------------------------------:|:-------------------------------:|
-| Temporada 1 con herencia                                                |   master                        |
-| Temporada 1 sin herencia (repetición de lógica)                         |   sin-herencia                  |
-| Temporada 2 (solo médicos)                                              |   season-2                      |
+| Temporada 1 con herencia                                                |   [master](https://github.com/juancuiule/dr-casa/)                        |
+| Temporada 1 sin herencia (repetición de lógica)                         |   [sin-herencia](https://github.com/juancuiule/dr-casa/tree/sin-herencia)                  |
+| Temporada 2 (solo médicos)                                              |   [season-2](https://github.com/juancuiule/dr-casa/tree/season-2)                      |
