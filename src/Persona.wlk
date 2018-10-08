@@ -4,7 +4,7 @@ import EnfermedadInfecciosa.*
 class Persona {
 
 	var enfermedades
-	var temperatura
+	var property temperatura
 	var celulas
 
 	constructor(gradosDeTemperatura, unasCelulas, enfermedadesIniciales) {
@@ -47,7 +47,5 @@ class Persona {
 	method celulas() = celulas
 
 	method enfermedades() = enfermedades
-	
-	method temperatura(grados) { temperatura = grados }
 
 }
