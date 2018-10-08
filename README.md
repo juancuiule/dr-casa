@@ -1,6 +1,6 @@
 # dr-casa
-Ejercicio de paradigmas de programación UTN FRBA
-Unidad de Paradigma de Programación Orientada a Objetos
+- Ejercicio de paradigmas de programación UTN FRBA
+- Programación Orientada a Objetos
 
 Este es el repositorio con las distintas soluciones al ejercicio de Dr. Casa
 Para ver una solución ejecutar el siguiente comando de git
