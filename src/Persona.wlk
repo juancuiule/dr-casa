@@ -47,5 +47,7 @@ class Persona {
 	method celulas() = celulas
 
 	method enfermedades() = enfermedades
+	
+	method temperatura(grados) { temperatura = grados }
 
 }
