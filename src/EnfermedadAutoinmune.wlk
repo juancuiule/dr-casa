@@ -4,7 +4,7 @@ class EnfermedadAutoinmune inherits Enfermedad {
 		persona.perderCelulas(celulasQueAmenaza)
 	}
 	
-	method esAgresiva(persona) {
+	override method esAgresiva(persona) {
 		return diasInfectando > 30	
 	}
 }

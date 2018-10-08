@@ -9,7 +9,7 @@ class EnfermedadInfecciosa inherits Enfermedad {
 		celulasQueAmenaza *= 2
 	}
 	
-	method esAgresiva(persona) {
+	override method esAgresiva(persona) {
 		return celulasQueAmenaza > persona.celulas() * 0.1
 	}
 }
